@@ -7,7 +7,6 @@ function setup() {
 
 let lastMinute = -1; 
 
-// draw() is called 60 times per second
 function draw() {
     let hr = hour();
     let min = minute();
@@ -18,12 +17,6 @@ function draw() {
         console.log(min);
         lastMinute = min;
     }
-
-
-function draw() {
-    let hr = hour();
-    let min = minute();
-    let sec = second();
 
     background(200, 255, 200);
 
