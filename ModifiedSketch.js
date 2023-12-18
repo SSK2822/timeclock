@@ -5,6 +5,20 @@ function setup() {
     noStroke();
 }
 
+let lastMinute = -1; 
+
+// draw() is called 60 times per second
+function draw() {
+    let hr = hour();
+    let min = minute();
+    let sec = second();
+
+    // Check if the minute has changed and print to console
+    if (min !== lastMinute) {
+        console.log(min);
+        lastMinute = min;
+    }
+
 
 function draw() {
     let hr = hour();
