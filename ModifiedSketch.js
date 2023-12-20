@@ -20,10 +20,19 @@ function draw() {
 
     background(200, 255, 200);
 
+    // Draw hours as trees
+    // for (let i = 0; i < hr % 12; i++) {
+    //     let treeHeight = map(i, 0, 11, 50, 300);
+    //     fill(100, 50, 0); // Brown color for tree trunk
+    //     rect(50 + i * 60, height - treeHeight, 20, treeHeight);
+    //     fill(0, 200, 0); // Green color for tree foliage
+    //     ellipse(60 + i * 60, height - treeHeight, 60, 60);
+    // }
+    
     // Draw hours as trees, separating every 4 hours
     for (let i = 0; i < hr; i++) {
-        let treeHeight = map(i % 4, 0, 3, 50, 150); // Height varies every 4 hours
-        let xPosition = 60 + (i * 60); // Adjust x position for each tree
+        let treeHeight = map(i, 0, 11, 50, 300); // Height varies every 4 hours
+        let xPosition = 50 + (i * 60); // Adjust x position for each tree
 
         // Adjust x position further every 4 hours to create a separation
         if (i % 4 === 0 && i !== 0) {
