@@ -20,13 +20,15 @@ function draw() {
 
     background(200, 255, 200);
 
-    // Draw hours as trees
-    for (let i = 0; i < hr % 12; i++) {
-        let treeHeight = map(i, 0, 11, 50, 300);
+    //Draw Trees for Hours
+    for (let i = 0; i < hr; i++) {
+        let treeHeight = map(i, 0, 23, 50, 300);
+        let xPos = 33 + i * 33;
+        let ePos = 43 + i * 33;
         fill(100, 50, 0); // Brown color for tree trunk
-        rect(50 + i * 60, height - treeHeight, 20, treeHeight);
+        rect(xPos, height - treeHeight, 20, treeHeight);
         fill(0, 200, 0); // Green color for tree foliage
-        ellipse(60 + i * 60, height - treeHeight, 60, 60);
+        ellipse(ePos, height - treeHeight, 60, 60);
     }
 
     // Draw minutes as clouds
